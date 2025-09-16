@@ -521,6 +521,7 @@ Let's see if we can find out if any of the records requests in the CSV versions 
 grep -i 'tucson' data/ice-foia-logs/*.csv
 ```
 **OMFG I SWEAR I DID NOT DO THAT ON PURPOSE — THAT'S CRAZY LMAO**
+**ALSO this is a lot easier than `less` and `/`**
 
 Note that the `-i` tells `grep` to do a case-insensitve search, so we'll match "Tucson" as well as "TUCSON" (or "TuCSoN"). We don't have to quote "tucson" in this example, but it's a reminder that it's a pattern and that we might need to use quotes if we include any special characters like `*` in the pattern. 
 
@@ -532,7 +533,7 @@ If we only want to see the names of the files that match, rather than one line o
 grep -il 'tucson' data/ice-foia-logs/*.csv
 ```
 
-In the `grep` commands we've typed so far, we've provided a specific list of files for `grep` to search. We can also use the `-r` option to tell it to *recursively* search all files and all files in subdirectories under a particure path:
+In the `grep` commands we've typed so far, we've provided a specific list of files for `grep` to search. We can also use the `-r` option to tell it to *recursively* search all files and all files in subdirectories under a particular path:
 
 ```
 grep -ilr 'tucson' data
