@@ -490,14 +490,14 @@ Explore the FOIA logs and answer these questions:
 
 **Write your answers here:**
 
-1. Command to find 2024 CSV FOIA logs: `find data/ice-foia-logs -iname '*2024*foia*.csv*'`
+1. Command to find 2024 CSV FOIA logs: `find data/ice-foia-logs -iname '*2024*foia*.csv'`
       **STOP i was so proud of myself for figuring this out on my own — this rly is intuitive its so annoying**
 
 2. Number of 2024 CSV files: **three**
 
-3. Your search term: i don't know what you wanted here so i did two things:
+3. Your search term: i didn't really understand what you wanted here and i was kind of just f*cking around so i did two things:
    
-   i used `wc -w data/ice-foia-logs/*.csv*` to find the word counts of each .csv foia log, and got that together their word counts totaled 96,309 (which i thought it was interesting that it gave total)
+   i used `wc -w data/ice-foia-logs/*.csv` to find the word counts of each .csv foia log, and got that together their word counts totaled 96,309 (which i thought it was interesting that it gave total)
    
    i used `less data/ice-foia-logs/2024-08_FOIA_Log.csv` and `/flight` to find requests for flight logs, and i found this:
 
