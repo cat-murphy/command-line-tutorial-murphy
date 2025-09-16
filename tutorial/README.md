@@ -353,9 +353,9 @@ Method used (arrow keys or ctrl+r): ctrl+r
 
 Commands used: 
 
-1. **ctrl+rrm, ctrl+r ... etc. until -> $ rm data/manual/mock_data_1.txt**
+1. ctrl+rrm, ctrl+r ... etc. until -> rm data/manual/mock_data_1.txt**
 
-2. **ctrl+rrmdir -> $ rmdir data/manual/mock_data/**
+2. ctrl+rrmdir -> rmdir data/manual/mock_data/**
 
 ## Viewing and previewing files
 
@@ -490,17 +490,24 @@ Explore the FOIA logs and answer these questions:
 
 **Write your answers here:**
 
-1. Command to find 2024 CSV FOIA logs: 
+1. Command to find 2024 CSV FOIA logs: `find data/ice-foia-logs -iname '*2024*foia*.csv*'`
+      **STOP i was so proud of myself for figuring this out on my own — this rly is intuitive its so annoying**
 
-2. Number of 2024 CSV files: 
+2. Number of 2024 CSV files: **three**
 
-3. Your search term: 
+3. Your search term: i don't know what you wanted here so i did two things:
+   
+   i used `wc -w data/ice-foia-logs/*.csv*` to find the word counts of each .csv foia log, and got that together their word counts totaled 96,309 (which i thought it was interesting that it gave total)
+   
+   i used `less data/ice-foia-logs/2024-08_FOIA_Log.csv` and `/flight` to find requests for flight logs, and i found this:
 
-   What you found: 
+      *2024-ICFO-49466,2024-08-01,Colin Aamot,,"From the month of August 2024, all of the following records from Patrick Lechleitner, Acting Director of the U.S. Immigration and Customs Enforcement: A full calendar export with all entries during business hours, or outside of business hours if in an official capacity. Documents sufficient to account for all flight logs, whether commercial flights, chartered, or military flights for all travel in any official capacity. All congressional correspondence and communications to/from Congressional Offices or Committees for the previous month including responses or document productions to outstanding, extant, or previous congressional inquiries or oversight efforts. All communications to/from the following email domains: @nss.eop.gov, @ustr.eop.gov, @cea.eop.gov, @ostp.eop.gov, @ceq.eop.gov, @nsc.eop.gov, @omb.eop.gov, @eop.gov, @who.eop.gov, and @ovp.eop.gov. All communications sent (not received) via email, SMS, Microsoft Teams, or Slack mentioning 'policy draft', 'updated policy', 'investigation', 'Bidenomics', 'Inflation Reduction Act', 'trends', 'encounters', or 'fentanyl'."*
+
+   ok BUT after doing that i looked up the requester, colin aamot, and i found this propublica article on the heritage foundation flooding federal agencies with foias: https://www.propublica.org/article/have-government-employees-mentioned-climate-change-voting-or-gender-identity-the-heritage-foundation-wants-to-know
 
 **Bonus answer:**
 
-Month with most requests: 
+Month with most requests: september 2024 had the most requests, although i initially thought to use `wc -l` to check and then checked it with `ls -l` and came away with the same answer
 
 ### Try it together
 
