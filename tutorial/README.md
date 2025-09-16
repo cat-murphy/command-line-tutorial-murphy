@@ -239,11 +239,11 @@ Using `ls` or a combination of `cd` and `ls`, explore the ICE detention statisti
 
 **Write your answers here:**
 
-1. Most recent fiscal year: **FY25**
+1. Most recent fiscal year: FY25
 
-2. Number of FY25 files: **two**
+2. Number of FY25 files: two
 
-3. What the numbers represent: **shows the date of the most recent update to the statistics, so one has data thru 2/14/25 and the other thru 2/27/25**
+3. What the numbers represent: shows the date of the most recent update to the statistics, so one has data thru 2/14/25 and the other thru 2/27/25
 
 (Check your answers against the solutions file when complete)
 
@@ -426,11 +426,11 @@ Use the commands you've learned to examine the UMPD Incidents CSV file and answe
 
 **Write your answers here:**
 
-1. First incident type on 2/1/2025: **the first type of incident to occur on 2/1/2025 was an injured/sick person**
+1. First incident type on 2/1/2025: the first type of incident to occur on 2/1/2025 was an injured/sick person
 
-2. Total rows (excluding header): **18,351**
+2. Total rows (excluding header): 18,351
 
-3. Most recent date in file: **ok when i `tail`, the entry is from 12/30/2020?? but i don't think that's what you're looking for, so i went and used `less` with `/` to search for entries with 2025-08, and with that i just used the arrow key to find an entry from 08/28/2025 ... so i'm not sure what i did wrong**
+3. Most recent date in file: ok when i `tail`, the entry is from 12/30/2020?? but i don't think that's what you're looking for, so i went and used `less` with `/` to search for entries with 2025-08, and with that i just used the arrow key to find an entry from 08/28/2025 ... so i'm not sure what i did wrong
 
 ## Searching for files and their contents
 
@@ -545,9 +545,13 @@ Use a different pattern to search the FOIA log CSV files for something of intere
 
 **Write your answer here:**
 
-Search term used: 
+Search term used: `grep -ir 'connecticut' data/ice-foia-logs/*.csv`
 
-What you found: 
+What you found: uh a conservative lawyer looking for tren de aragua in aurora and ... connecticut?????
+
+   *data/ice-foia-logs/2024-09_FOIA_Log.csv:2024-ICFO-59044,2024-09-23,James Fitzpatrick,Center to Advance Security in America,"Any and all communications, records, calendar entries pertaining to Patrick Lechleitner and Staci Barrera: 1. Related to the presence of Tren de Aragua in the United States 2.Containing the following phrases and/or words: “Tren de Aragua”, “TdA”, “Venezuela”, “transnational crime”, “migrant crime”, “Aurora”, “Connecticut”, (b)(6);(b)(7)(c)”, “Tocorón prison”, and (b)(6);(b)(7)(c)"*
+
+anyway i looked him up and he **floods** the federal government with foias apparently — everything from the nuclear regulatory committee to homeland security, which he foied 21 times between january and september of 2024
 
 ### Try it yourself
 
