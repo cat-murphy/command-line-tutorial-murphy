@@ -349,13 +349,13 @@ Typing the minimal number of characters, delete the file `data/manual/mock_data/
 
 **Write your answer here:**
 
-Method used (arrow keys or ctrl+r): 
+Method used (arrow keys or ctrl+r): ctrl+r
 
 Commands used: 
 
-1. 
+1. ctrl+rrm, ctrl+r ... etc. until -> $ rm data/manual/mock_data_1.txt 
 
-2. 
+2. ctrl+rrmdir -> $ rmdir data/manual/mock_data/
 
 ## Viewing and previewing files
 
