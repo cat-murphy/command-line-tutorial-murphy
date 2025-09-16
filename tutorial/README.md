@@ -235,15 +235,15 @@ Using `ls` or a combination of `cd` and `ls`, explore the ICE detention statisti
 
 1. What is the most recent fiscal year for which ICE detention statistics are available?
 2. How many detention statistics files are there for fiscal year 2025?
-3. What do you think the numbers in the FY25 filenames represent (hint: look at the dates)?
+3. What do you think the numbers in the FY25 filenames represent (hint: look at the dates)? 
 
 **Write your answers here:**
 
-1. Most recent fiscal year: 
+1. Most recent fiscal year: **FY25**
 
-2. Number of FY25 files: 
+2. Number of FY25 files: **two**
 
-3. What the numbers represent: 
+3. What the numbers represent: **shows the date of the most recent update to the statistics, so one has data thru 2/14/25 and the other thru 2/27/25**
 
 (Check your answers against the solutions file when complete)
 
