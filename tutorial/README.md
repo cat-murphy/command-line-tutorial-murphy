@@ -412,6 +412,7 @@ To get the number of rows in a file, use `wc`:
 ```
 wc -l data/umpd/umpd_incidents.csv 
 ```
+ok so right after this i saw that wc alone would display three #s and the -l was the first, so lines. so i tried -c and got characters ... and then -w and got words. damn that *is* pretty intuitive. -cat
 
 ### Try it yourself
 
@@ -425,11 +426,11 @@ Use the commands you've learned to examine the UMPD Incidents CSV file and answe
 
 **Write your answers here:**
 
-1. First incident type on 2/1/2025: 
+1. First incident type on 2/1/2025: **the first type of incident to occur on 2/1/2025 was an injured/sick person**
 
-2. Total rows (excluding header): 
+2. Total rows (excluding header): **18,351**
 
-3. Most recent date in file: 
+3. Most recent date in file: **ok when i `tail`, the entry is from 12/30/2020?? but i don't think that's what you're looking for, so i went and used `less` with `/` to search for entries with 2025-08, and with that i just used the arrow key to find an entry from 08/28/2025 ... so i'm not sure what i did wrong**
 
 ## Searching for files and their contents
 
