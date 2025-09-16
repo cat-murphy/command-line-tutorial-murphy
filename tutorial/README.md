@@ -520,6 +520,7 @@ Let's see if we can find out if any of the records requests in the CSV versions 
 ```
 grep -i 'tucson' data/ice-foia-logs/*.csv
 ```
+**OMFG I SWEAR I DID NOT DO THAT ON PURPOSE — THAT'S CRAZY LMAO**
 
 Note that the `-i` tells `grep` to do a case-insensitve search, so we'll match "Tucson" as well as "TUCSON" (or "TuCSoN"). We don't have to quote "tucson" in this example, but it's a reminder that it's a pattern and that we might need to use quotes if we include any special characters like `*` in the pattern. 
 
