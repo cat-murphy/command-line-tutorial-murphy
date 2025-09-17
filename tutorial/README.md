@@ -547,11 +547,11 @@ Use a different pattern to search the FOIA log CSV files for something of intere
 
 Search term used: `grep -ir 'connecticut' data/ice-foia-logs/*.csv`
 
-What you found: uh a conservative lawyer looking for tren de aragua in aurora and ... connecticut?????
+What you found: uh a conservative lawyer looking to connect tren de aragua with aurora and ... connecticut?????
 
    *data/ice-foia-logs/2024-09_FOIA_Log.csv:2024-ICFO-59044,2024-09-23,James Fitzpatrick,Center to Advance Security in America,"Any and all communications, records, calendar entries pertaining to Patrick Lechleitner and Staci Barrera: 1. Related to the presence of Tren de Aragua in the United States 2.Containing the following phrases and/or words: “Tren de Aragua”, “TdA”, “Venezuela”, “transnational crime”, “migrant crime”, “Aurora”, “Connecticut”, (b)(6);(b)(7)(c)”, “Tocorón prison”, and (b)(6);(b)(7)(c)"*
 
-anyway i looked him up and he **floods** the federal government with foias apparently — everything from the nuclear regulatory committee to homeland security, which he foied 21 times between january and september of 2024
+def heard one of those conspiracies before, but connecticut is new. anyway i looked him up and he **floods** the federal government with foias apparently — everything from the nuclear regulatory committee to homeland security, which he foied 21 times between january and september of 2024
 
 ### Try it yourself
 
@@ -568,18 +568,37 @@ Now let's practice with csvkit tools. Work through these exercises and record yo
 
 **Write your answers here:**
 
-1. Command used for csvgrep: 
+1. Command used for csvgrep: `csvgrep -c 'Requester::Organization Name' -m 'law' data/ice-foia-logs/2024-10_FOIA_Log.csv`
 
-2. Command used to save with csvcut: 
+2. Command used to save with csvcut: `csvgrep -c 'Requester::Organization Name' -m 'Law' data/ice-foia-logs/2024-10_FOIA_Log.csv | csvcut -c 'Requester::Organization Name' > data/ice-foia-logs/2024_lawyer_requests.csv`
+
+note: i did *not* use chatgpt but i did google "how to save a grep one column of csv to new csv csvcut"
 
 3. Analysis answers:
    - Total lawyer/law firm requests: 
-   - Patterns observed: 
-   - More frequent ("Law" or "Legal"): 
+   
+      ok so I think the answer you're looking for is 2,349 (made sure to exclude header) because that's how many **'Law'** results there were
+   
+      so, yes, i created the file you told me to: `2024_lawyer_requests.csv`
+
+      HOWEVER i noticed that there were also several **'law'** and then the last bullet here mentions **'legal"**, so i created another file, `test.csv` to try putting all of those search terms together like i would in R. i did google this btw. but anyway it said to use `-r'(law|Law|legal|Legal)'` with `csvgrep` so i did that and there were *2,427* requests total (my test.csv for some reason has an empty row at the end, so this number factors that in)
+
+      well then i wanted to know how many of each so i did this for each one: `grep 'insert_term' data/ice-foia-logs/test.csv | wc -l`
+
+      also googled that, obv. this is what i found: there were 2,349 'Law', 73 'Legal', 6 'law' and 0 'legal'
+      HOWEVER, my math wasnt mathing because the `wc -l` for test.csv was 2,428, which would be 2,427 without a header. but my numbers were giving me 2,428, which can't be right. *so then i had to check to see if any of them contained two words* googled that and did this: `grep 'Law' data/ice-foia-logs/test.csv | grep 'Legal'`
+      
+      and yes, one did, in fact, contain both words: 'CUNY School of Law, Main Street Legal Services'
+
+      so my answer is 2,427, but idk if you wanted me to down a rabbit hole to find that
+
+   - Patterns observed: well, as i was scrolling through, i noticed a lot of "Alexandra Lozano Immigration Law PLLC," so i command F-ed it and there were 677 results ... so yeah, evidently many of these are coming from the same firms because are representing many questions. google informed me that this is the "largest immigration-focused law firm in the country" with over 600 employees. PLUS, Alexandra Lozano Immigration Law is based out of Langley Park, 1.9 miles from Knight Hall
+
+   - More frequent ("Law" or "Legal"): as noted above, law: there were 2,349 'Law' (plus 6 'law') vs. *"73"* 'Legal' (BUT THIS INCLUDES THE DOUBLE COUNTING NOTED ABOVE!!!!)
 
 **Bonus answer:**
-   - Number of unique names: 
-   - Comparison to total requests: 
+   - Number of unique names: 356 (i ran this on 2024_lawyer_requests.csv to not screw w/ you lol, but there are some that appear to be duplicates just because of non-standardized formatting, but idk how to deal with that here)
+   - Comparison to total requests: there are more than 6 1/2 times as many requests as there are requesters. i used `uniq -c`, which showed that three law firms alone (Alexandra Lozano - 677, GF Immigration - 366, and Quiroga - 321) accounted for 58% of all requests
 
 ## Redirecting input and output
 
@@ -623,6 +642,8 @@ grep -i 'law' data/ice-foia-logs/*.csv | less
 Now we can page through the output of `grep` using the keystrokes we learned before. Remember, type `q` to quite out of `less`.
 
 So much of data journalism is just counting things. We can use a few things we've learned so far to get really quick signals about data, without needing something like a pivot table. Let's see how often "maryland" is mentioned in the FOIA logs by combining `grep` and `wc`:
+
+**evidently, i should REALLY stop going ahead. i want to cry. adhd is fun until it's not LMAO**
 
 ```
 grep -i 'maryland' data/ice-foia-logs/*.csv | wc -l
