@@ -675,6 +675,8 @@ Let's modify a `grep` command we used earlier to search for Maryland only in the
 csvgrep -c 'Request Description' -m "Maryland" data/ice-foia-logs/2024-09_FOIA_Log.csv
 ```
 
+**this is torture why do i do this to myself OMG you must be laughing so hard**
+
 Note that `csvgrep` only works on a single file at a time and also includes the header row in the output. The search is also case-sensitive, though there is a [way to specify case insensitve patterns](https://github.com/wireservice/csvkit/issues/248#issuecomment-32101897).
 
 How do we learn about the options of `csvgrep` when `man csvgrep` doesn't seem to work. In addition to *manual pages*, many commands have a help option which, when specified, will show help text. Conventionally, this option is `-h` or `--help`:
@@ -709,18 +711,22 @@ Note that this pipeline has multiple steps connected with `|`. We can connect th
 
 Use `csvgrep` to find requests that match "Law" in the `Requester::Organization Name` column of `data/ice-foia-logs/2024-10_FOIA_Log.csv` and use `csvcut` to display only that column. Save this to a file named `data/ice-foia-logs/2024_lawyer_requests.csv`.
 
+**am i insane or did i just do this ... i feel like i just did this**
+
 Bonus points: Use `uniq` and `csvsort` to get only unique lawyer/law firm names. Then count the number of unique names.
 
 **Write your final answers here:**
 
 Commands used:
 
-1. csvgrep command: 
+1. csvgrep command: `csvgrep -c 'Requester::Organization Name' -m 'law' data/ice-foia-logs/2024-10_FOIA_Log.csv`
 
-2. csvcut and save command: 
+2. csvcut and save command: `csvgrep -c 'Requester::Organization Name' -m 'Law' data/ice-foia-logs/2024-10_FOIA_Log.csv | csvcut -c 'Requester::Organization Name' > data/ice-foia-logs/2024_lawyer_requests.csv`
 
-3. Bonus - unique names command: 
+(alternatively, `csvgrep -c 'Requester::Organization Name' -r '(Law|law|Legal)' data/ice-foia-logs/2024-10_FOIA_Log.csv | csvcut -c 'Requester::Organization Name' > data/ice-foia-logs/test.csv` to get total # law/legal groups — 2,427)
+
+3. Bonus - unique names command: `csvsort data/ice-foia-logs/2024_lawyer_requests.csv | uniq > data/ice-foia-logs/unique_firms.csv`
 
 Results:
-- Total requests from legal organizations: 
-- Number of unique legal organization names: 
+- Total requests from legal organizations: 2,349
+- Number of unique legal organization names: 356
