@@ -353,9 +353,9 @@ Method used (arrow keys or ctrl+r): ctrl+r
 
 Commands used: 
 
-1. ctrl+rrm, ctrl+r ... etc. until -> rm data/manual/mock_data_1.txt**
+1. ctrl+r rm, ctrl+r ... etc. until -> rm data/manual/mock_data_1.txt
 
-2. ctrl+rrmdir -> rmdir data/manual/mock_data/**
+2. ctrl+r rmdir -> rmdir data/manual/mock_data/
 
 ## Viewing and previewing files
 
