@@ -549,7 +549,7 @@ Search term used: `grep -ir 'connecticut' data/ice-foia-logs/*.csv`
 
 What you found: uh a conservative lawyer looking to connect tren de aragua with aurora and ... connecticut?????
 
-   *data/ice-foia-logs/2024-09_FOIA_Log.csv:2024-ICFO-59044,2024-09-23,James Fitzpatrick,Center to Advance Security in America,"Any and all communications, records, calendar entries pertaining to Patrick Lechleitner and Staci Barrera: 1. Related to the presence of Tren de Aragua in the United States 2.Containing the following phrases and/or words: “Tren de Aragua”, “TdA”, “Venezuela”, “transnational crime”, “migrant crime”, “Aurora”, “Connecticut”, (b)(6);(b)(7)(c)”, “Tocorón prison”, and (b)(6);(b)(7)(c)"*
+   *2024-ICFO-59044,2024-09-23,James Fitzpatrick,Center to Advance Security in America,"Any and all communications, records, calendar entries pertaining to Patrick Lechleitner and Staci Barrera: 1. Related to the presence of Tren de Aragua in the United States 2.Containing the following phrases and/or words: “Tren de Aragua”, “TdA”, “Venezuela”, “transnational crime”, “migrant crime”, “Aurora”, “Connecticut”, (b)(6);(b)(7)(c)”, “Tocorón prison”, and (b)(6);(b)(7)(c)"*
 
 def heard one of those conspiracies before, but connecticut is new. anyway i looked him up and he **floods** the federal government with foias apparently — everything from the nuclear regulatory committee to homeland security, which he foied 21 times between january and september of 2024
 
