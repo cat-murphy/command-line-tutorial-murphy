@@ -590,7 +590,7 @@ note: i did *not* use chatgpt but i did google "how to save a grep one column of
       
       and yes, one did, in fact, contain both words: 'CUNY School of Law, Main Street Legal Services'
 
-      so my answer is 2,427, but idk if you wanted me to down a rabbit hole to find that
+      so my answer is 2,427, but idk if you wanted me to go down a rabbit hole to find that
 
    - Patterns observed: well, as i was scrolling through, i noticed a lot of "Alexandra Lozano Immigration Law PLLC," so i command F-ed it and there were 677 results ... so yeah, evidently many of these are coming from the same firms because are representing many questions. google informed me that this is the "largest immigration-focused law firm in the country" with over 600 employees. PLUS, Alexandra Lozano Immigration Law is based out of Langley Park, 1.9 miles from Knight Hall
 
