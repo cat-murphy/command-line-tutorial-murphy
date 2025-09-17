@@ -430,7 +430,7 @@ Use the commands you've learned to examine the UMPD Incidents CSV file and answe
 
 2. Total rows (excluding header): 18,351
 
-3. Most recent date in file: ok when i `tail`, the entry is from 12/30/2020?? but i don't think that's what you're looking for, so i went and used `less` with `/` to search for entries with 2025-08, and with that i just used the arrow key to find an entry from 08/28/2025 ... so i'm not sure what i did wrong
+3. Most recent date in file: ok when i use `tail`, the entry is from 12/30/2020?? but i don't think that's what you're looking for, so i went and used `less` with `/` to search for entries with 2025-08, and with that i just used the arrow key to find an entry from 08/28/2025 ... so i'm not sure what i did wrong
 
 ## Searching for files and their contents
 
