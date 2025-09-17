@@ -54,9 +54,20 @@ Finally, some of the examples in the tutorial use [csvkit](https://github.com/wi
 6. **Tutorial reflection:**
    At the end of this README, answer the following questions:
    - How could command line skills improve your efficiency as a journalist?
+      
+      i think it goes back to what you said earlier: a lot of journalism is about counting. i’ve always used r, and i love r, but the command line does in some ways seem more intuitive lol. of course, i'm sure there are certain advantages/disadvantages to both, but they both serve generally the same function in journalism, right? to analyze data — everything from numbers to text. and if this could improve my efficiency as a data journalist specifically, i’m all ears. i feel like i sometimes spend so long trying to get an r chunk to work that im ready to leak brain cells out of my ears. like, oh my god, using arrows to fetch an old prompt? *.csv?? cd .. ??? TAB COMPLETION???? a. m. a. z. i. n. g. those things alone would likely halve the time it takes me to do some of the tasks i do in r. 
+
    - What types of stories or investigations would benefit most from these tools?
+      
+      i mean, my love of r is rooted in my love for enormous datasets — particularly when it comes to money stories or trend tracking. but even from the little ive used it, the command line seems considerably more efficient than r. it was so much easier to execute searches across datasets, something that, in r, requires a bunch of str_detect() and r_bind(). for me personally, i think this would allow me to do things faster. i’m working with a lot of money data right now for cns — like, really big figures — and this does seem more manageable and maybe slightly less infuriating than r. speaking about journalism in general, i think any good data story (i.e. any story that cannot be contained in a google sheet) can benefit from tools like this that provide programmatic analysis and allow you (and editors) to trace and thus fact-check your steps. i also think this seems super helpful for short turnaround stories — particularly for getting quick summary statistics on really big datasets.
+
    - What felt most challenging about learning these technical skills?
+
+   i mean, the biggest thing is learning a new language. i can somewhat competently stumble around in r, but that took a while, and i’m used to the syntax. i will note that when i tried to take your class in the spring (lol) and we looked at the command line, i got really nervous. and then i dropped the class, so it was fine (well, that part was, anyway). and looking at it again on monday gave me the same ick factor. but honestly? it was super intuitive — to the point where i was guessing how to do something based on how i had done something else. with most of it, i kind of just played around with the syntax until it did what i wanted, and i could usually troubleshoot my way through it by myself (or with a very quick google search). which made me feel super smart, btw — great feeling. so maybe im not that nervous about learning it anymore?
+
    - How does this connect to your understanding of data journalism?
+   
+   i dont know. do “real” (sorry) data journalists use the command line for stuff? i feel like this seems super helpful to me, but im kind of a moron, so what do i know? it just doesn’t feel like this gets talked about very much, that’s all. but from my perspective, this connects to data journalism in a lot of ways: it’s an intuitive tool that allows you to load large sets of data, somewhat quickly figure out what you’re looking at and then analyze it — both on its own and in conjunction with other datasets — to find compelling data-driven story angles. i’m going to be honest, i wasnt exactly sure how it connects to ai. BUT. then i remembered i’m pretty sure that’s how you connect to an ai api, which is how you train models … ?
 
 ## What's in here?
 
